@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap can nang(kg)</p>
+<input type="number" id="weight1">
+<p>nhap chieu cao(m)</p>
+<input type="number" id='hight1'>
+<button onclick="check()">Check</button>
+
+<script>
+    let weight;
+    let hight;
+    let bmi;
+    function check(){
+        weight= +document.getElementById('weight1').value;
+        hight = +document.getElementById('hight1').value;
+        bmi = weight/hight^2;
+        if(weight>0 && hight>0) {
+            if (bmi < 18.5) {
+                document.write('underweight');
+            } else if (18.5 <= bmi && bmi<25) {
+                document.write('nomal');
+            } else if (25<=bmi && bmi<30) {
+                document.write('overweight');
+            } else {
+                document.write('osebe');
+            }
+        }else {
+        document.write('nhap sai roi');
+        }
+    }
+
+</script>
+</body>
+</html>

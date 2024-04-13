@@ -12,24 +12,28 @@
 <button onclick="check()">Check</button>
 
 <script>
-    let weight;
-    let hight;
-    let bmi;
+
+
     function check(){
-        weight= +document.getElementById('weight1').value;
-        hight = +document.getElementById('hight1').value;
-        bmi = weight/hight^2;
+
+        let weight= +document.getElementById('weight1').value;
+        let hight = +document.getElementById('hight1').value;
+        bmi = weight/(hight^2);
         if(weight>0 && hight>0) {
             if (bmi < 18.5) {
                 document.write('underweight');
-            } else if (18.5 <= bmi && bmi<25) {
+            }
+            else if (18.5 <= bmi && bmi<25) {
                 document.write('nomal');
-            } else if (25<=bmi && bmi<30) {
+            }
+            else if (25<=bmi && bmi<30) {
                 document.write('overweight');
-            } else {
+            }
+            else if(30<=bmi){
                 document.write('osebe');
             }
-        }else {
+        }
+        else {
         document.write('nhap sai roi');
         }
     }

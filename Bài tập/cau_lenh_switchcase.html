@@ -5,13 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<input type="number" id="month">
+<h2>Kiem tra so ngay trong thang</h2>
+<input type="number" id="month" >
 <button onclick="count_date()">Tinh so ngay</button>
-<p id="result"></p>
+<p id="result">day la cho hien thi ket qua</p>
 <script>
-    let input_month ;
+    // let input_month = parseInt("input_month");
+    let input_month = document.getElementById('month').value;
     input_month = parseInt("input_month");
-    input_month = document.getElementById('month').value;
+
     function count_date() {
         switch (input_month) {
             case 1:
@@ -21,15 +23,19 @@
             case 8:
             case 10:
             case 12:
-                document.getElementById('resoult').innerText= 'Thang co 31 ngay'
+                document.getElementById('result').innerText= 'Thang' + input_month + ' co 31 ngay';
                 break;
             case 2:
-                document.getElementById('resoult').innerText='Thang co 28,29 ngay'
+                document.getElementById('result').innerText='Thang 2 co 28,29 ngay';
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-                document.getElementById('resoult').innerText= ''
+                document.getElementById('result').innerText= 'Thang' + input_month + ' co 30 ngay';
+                break;
+            default:
+                document.getElementById('result').innerText= 'Nhap sai roi';
         }
     }
 </script>

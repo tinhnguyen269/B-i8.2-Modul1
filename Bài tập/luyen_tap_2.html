@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--bai4-->
+<!--Nhap canh a:<input type="number" id="canh_a">-->
+<!--Nhap canh b:<input type="number" id="canh_b"><br>-->
+<!--<button onclick="dien_tich()">ket qua</button>-->
+<!--<p id="result">Dien tich:</p>-->
+
+<!--bai 10-->
+<!--<h3>Bảng giá điện 2021</h3>-->
+<!--<pre>-->
+<!--    Bậc 1 (0 - 50 kWh): Giá điện thấp, thường được áp dụng cho những hộ sử dụng điện năng tiêu thụ thấp. Giá thường dao động từ khoảng 1.549 - 1.864 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--    Bậc 2 (51 - 100 kWh): Giá điện tăng lên so với bậc 1, nhưng vẫn ở mức giá thấp hơn so với các bậc cao hơn. Giá thường dao động từ khoảng 1.864 - 2.701 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--    Bậc 3 (101 - 200 kWh): Giá điện tăng mạnh hơn so với các bậc thấp hơn. Giá thường dao động từ khoảng 2.701 - 3.256 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--    Bậc 4 (201 - 300 kWh): Giá điện tiếp tục tăng, là một mức giá cao. Giá thường dao động từ khoảng 3.256 - 4.038 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--    Bậc 5 (301 - 400 kWh): Giá điện tiếp tục tăng mạnh so với các bậc thấp hơn. Giá thường dao động từ khoảng 4.038 - 5.774 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--    Bậc 6 (trên 400 kWh): Đây là mức giá cao nhất, thường được áp dụng cho các hộ sử dụng năng lượng điện lớn. Giá thường dao động từ khoảng 5.774 - 6.242 VND/kWh (thông tin tháng 5 năm 2021).-->
+<!--</pre>-->
+<!--<label for="num_el">Nhap vao so dien</label>-->
+<!--<input type="number" id="num_el" oninput="calculter_electric()" >-->
+<!--<p id="result">Tiền điện của bạn:</p>-->
+
+<!--Bai 12-->
+<!--<h3>Tính lãi ngân hàng</h3>-->
+<!--<pre>-->
+<!--    3 tháng : 8%-->
+<!--    6 tháng : 10%-->
+<!--    12 tháng : 12%-->
+<!--</pre>-->
+<!--<select id="bank_interest">-->
+<!--    <option value="0.08">3 tháng</option>-->
+<!--    <option value="0.1">6 tháng</option>-->
+<!--    <option value="0.12">12 tháng</option>-->
+<!--</select>-->
+<!--<label for="borrow_money" >Số tiền cần vay</label>-->
+<!--<input type="number" id="borrow_money" oninput="cal_bank_interest()">-->
+<!--<p id="result">Số tiền phải trả sau lãi:</p>-->
+<script>
+
+
+    // bài 1
+    // let cel = +prompt("nhap nhiet do(C):");
+    // let fah = cel * (9/5) +32;
+    // alert(cel +"do C"+"="+fah+"do F")
+
+    // Bài 2
+    // let met = +prompt("nhap vao met:");
+    // let feet = met * 3.2808;
+    // alert(met +"met"+"="+feet+"feet")
+
+    // Bài 3
+    // let a = +prompt("nhap do dai canh hinh vuong");
+    // let result = a*a;
+    // alert("Dien tich la:"+result)
+
+    // Bài 4
+    // function dien_tich() {
+    //     let a = parseInt(document.getElementById("canh_a").value);
+    //     let  b = parseInt(document.getElementById("canh_b").value);
+    //     let result = a*b;
+    //     document.getElementById("result").innerHTML="Dien tich:"+ result;
+    // }
+
+    // Bai 5
+    // let a = +prompt("do dai canh a");
+    // let b = +prompt("do dai canh b");
+    //
+    // let s = (a*b)/2;
+    // alert("dien tich tam giac vuong la:"+s)
+
+
+    // Bai6
+    // // ax + b = c
+    // let a = +prompt("nhap vao he so a");
+    // let b = +prompt("nhap vao he so b");
+    // let c = +prompt("nhap vao he so c");
+    //
+    // if (a!==0) {
+    //     let result = (c-b)/a ;
+    //     alert("phuong trinh co nghiem la:"+result);
+    // } else if (a===0 && c===0) {
+    //     alert("phuong trinh co vo so nghiem!");
+    // } else if (a===0 && c!==0) {
+    //     alert("phuong trinh vo nghiem!");
+    // }
+
+    // Bai 7
+    // ax*x +bx +c = 0
+    // let a = +prompt("nhap a");
+    // let b = +prompt("nhap b");
+    // let c = +prompt("nhap c");
+    // let x ;
+    // let delta = (b*b)-4*a*c;
+    // if (delta>0) {
+    //     let x1=(-b+Math.sqrt(delta))/(2*a);
+    //     let x2=(-b+Math.sqrt(delta))/(2*a);
+    //     alert("nghiem cua phuong trinh la:"+ x1 + " va" + x2)
+    // }
+    // else if (delta===0) {
+    //     x=-b/2*a;
+    //     alert("phuong trinh co nghiem kep" + x);
+    // } else {
+    //     alert("phuong trinh khong co nghiem!")
+    // }
+
+    // Bai 8
+    // let age =+prompt("nhap vao tuoi cua 1 nguoi");
+    // while ( !Number.isInteger(age)) {
+    //     age = parseInt(prompt("nhap vao so nguyen 1-120"));
+    //
+    // }
+    // if (age>0 && age<=120) {
+    //     alert("True");
+    // } else {
+    //     alert("False");
+    // }
+
+    // Bai 9
+    // let a = +prompt("nhap vao canh a")
+    // let b = +prompt("nhap vao canh b")
+    // let c = +prompt("nhap vao canh c")
+    //
+    // if (a>0 && b>0 && c>0 ) {
+    //     if (a+b>c && b+c>a && a+c>b) {
+    //         alert("a,b,c la 3 canh tam giac" );
+    //     } else {
+    //         alert("a,b,c khong phai la 3 canh tam giac" );
+    //     }
+    // } else {
+    //     alert("a,b,c khong phai la 3 canh tam giac");
+    // }
+
+    // Bai 10
+    // function calculter_electric() {
+    //     let num = document.getElementById("num_el").value;
+    //     let price ;
+    //     if (0<= num && num<=50) {
+    //         price = num*1549;
+    //     }
+    //     else if (51<= num && num<=100) {
+    //         price = num*1864;
+    //     }
+    //     else if (101<= num && num<=200) {
+    //         price = num*2701;
+    //     }
+    //     else if (201<= num && num<=300) {
+    //         price = num*3256;
+    //     }
+    //     else if (301<= num && num<=400) {
+    //         price = num*4038;
+    //     }
+    //     else {
+    //         price = num*5774;
+    //     }
+    //     document.getElementById("result").innerText="Tiền điện của bạn:" +price +"đ";
+    // }
+
+
+    // Bài 12
+    // function cal_bank_interest() {
+    //     let money = parseInt(document.getElementById("borrow_money").value);
+    //     let interest = document.getElementById("bank_interest").value;
+    //     let result ;
+    //     if (interest===0.08) {
+    //         result = (money * 0.08) + money;
+    //     }
+    //     else if (interest===0.1) {
+    //         result = (money * 0.1) + money;
+    //     }
+    //     else if (interest===0.12) {
+    //             result = (money * 0.12) + money;
+    //     }
+    //     document.getElementById("result").innerHTML = "Số tiền phải trả sau lãi:" +result;
+    // }
+</script>
+</body>
+</html>
+
+
+
+
+
